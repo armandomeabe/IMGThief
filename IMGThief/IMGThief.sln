@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMGThief", "IMGThief\IMGThief.csproj", "{56BA540F-D550-4599-B26F-13F718049C40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMGThief.Core", "IMGThief.Core\IMGThief.Core.csproj", "{42733341-9AB8-442F-9BF1-EBBFA794902E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMGThief.GUI", "IMGThief.GUI\IMGThief.GUI.csproj", "{AC4D7409-F535-44F7-9D2D-23CB071BD0E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56BA540F-D550-4599-B26F-13F718049C40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56BA540F-D550-4599-B26F-13F718049C40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56BA540F-D550-4599-B26F-13F718049C40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56BA540F-D550-4599-B26F-13F718049C40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42733341-9AB8-442F-9BF1-EBBFA794902E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42733341-9AB8-442F-9BF1-EBBFA794902E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42733341-9AB8-442F-9BF1-EBBFA794902E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42733341-9AB8-442F-9BF1-EBBFA794902E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC4D7409-F535-44F7-9D2D-23CB071BD0E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC4D7409-F535-44F7-9D2D-23CB071BD0E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC4D7409-F535-44F7-9D2D-23CB071BD0E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC4D7409-F535-44F7-9D2D-23CB071BD0E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

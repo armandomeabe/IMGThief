@@ -1,0 +1,8 @@
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.Core\bin\Debug\IMGThief.Core.dll
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.Core\bin\Debug\IMGThief.Core.pdb
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.Core\bin\Debug\HtmlAgilityPack.dll
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.Core\bin\Debug\HtmlAgilityPack.pdb
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.Core\bin\Debug\HtmlAgilityPack.xml
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.Core\obj\Debug\IMGThief.Core.csprojResolveAssemblyReference.cache
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.Core\obj\Debug\IMGThief.Core.dll
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.Core\obj\Debug\IMGThief.Core.pdb

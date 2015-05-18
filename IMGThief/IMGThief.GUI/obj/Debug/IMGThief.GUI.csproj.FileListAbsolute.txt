@@ -1,0 +1,14 @@
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.GUI\bin\Debug\IMGThief.GUI.exe.config
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.GUI\bin\Debug\IMGThief.GUI.exe
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.GUI\bin\Debug\IMGThief.GUI.pdb
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.GUI\obj\Debug\IMGThief.GUI.csprojResolveAssemblyReference.cache
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.GUI\obj\Debug\IMGThief.GUI.Properties.Resources.resources
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.GUI\obj\Debug\IMGThief.GUI.csproj.GenerateResource.Cache
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.GUI\obj\Debug\IMGThief.GUI.exe
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.GUI\obj\Debug\IMGThief.GUI.pdb
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.GUI\bin\Debug\IMGThief.Core.dll
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.GUI\bin\Debug\HtmlAgilityPack.dll
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.GUI\bin\Debug\IMGThief.Core.pdb
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.GUI\bin\Debug\HtmlAgilityPack.pdb
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.GUI\bin\Debug\HtmlAgilityPack.xml
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.GUI\obj\Debug\IMGThief.GUI.Form1.resources
