@@ -1,0 +1,17 @@
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\VTF\bin\Debug\VTF.exe.config
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\VTF\bin\Debug\VTF.exe
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\VTF\bin\Debug\VTF.pdb
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\VTF\bin\Debug\EntityFramework.dll
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\VTF\bin\Debug\EntityFramework.SqlServer.dll
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\VTF\bin\Debug\IMGThief.Core.dll
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\VTF\bin\Debug\HtmlAgilityPack.dll
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\VTF\bin\Debug\journeyofcode.Images.OnenoteOCR.dll
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\VTF\bin\Debug\IMGThief.Core.pdb
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\VTF\bin\Debug\EntityFramework.xml
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\VTF\bin\Debug\EntityFramework.SqlServer.xml
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\VTF\bin\Debug\HtmlAgilityPack.pdb
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\VTF\bin\Debug\HtmlAgilityPack.xml
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\VTF\bin\Debug\journeyofcode.Images.OnenoteOCR.pdb
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\VTF\obj\Debug\VTF.csprojResolveAssemblyReference.cache
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\VTF\obj\Debug\VTF.exe
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\VTF\obj\Debug\VTF.pdb

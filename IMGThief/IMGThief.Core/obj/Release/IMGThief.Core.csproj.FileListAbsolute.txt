@@ -1,0 +1,10 @@
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.Core\bin\Release\IMGThief.Core.dll
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.Core\bin\Release\IMGThief.Core.pdb
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.Core\bin\Release\HtmlAgilityPack.dll
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.Core\bin\Release\journeyofcode.Images.OnenoteOCR.dll
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.Core\bin\Release\journeyofcode.Images.OnenoteOCR.pdb
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.Core\bin\Release\HtmlAgilityPack.pdb
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.Core\bin\Release\HtmlAgilityPack.xml
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.Core\obj\Release\IMGThief.Core.csprojResolveAssemblyReference.cache
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.Core\obj\Release\IMGThief.Core.dll
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\IMGThief.Core\obj\Release\IMGThief.Core.pdb

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EmailSeekerModelStoreContainer" CdmEntityContainer="EmailSeekerEntities">
+    <EntitySetMapping Name="Emails">
+      <EntityTypeMapping TypeName="EmailSeekerModel.Email">
+        <MappingFragment StoreEntitySet="Emails">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="email1" ColumnName="email" />
+          <ScalarProperty Name="source" ColumnName="source" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="URLs">
+      <EntityTypeMapping TypeName="EmailSeekerModel.URL">
+        <MappingFragment StoreEntitySet="URLs">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="source" ColumnName="source" />
+          <ScalarProperty Name="relativepart" ColumnName="relativepart" />
+          <ScalarProperty Name="visited" ColumnName="visited" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

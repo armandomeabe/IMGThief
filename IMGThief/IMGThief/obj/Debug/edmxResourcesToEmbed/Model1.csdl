@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmailSeekerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Email">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="email1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="source" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="EmailSeekerEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Emails" EntityType="Self.Email" />
+    <EntitySet Name="URLs" EntityType="EmailSeekerModel.URL" />
+  </EntityContainer>
+  <EntityType Name="URL">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="source" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="relativepart" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="visited" Type="Boolean" Nullable="false" />
+  </EntityType>
+</Schema>

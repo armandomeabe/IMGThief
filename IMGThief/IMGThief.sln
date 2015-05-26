@@ -11,6 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMGThief.GUI", "IMGThief.GU
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "journeyofcode.Images.OnenoteOCR", "..\..\journeyofcode\OnenoteOCR\journeyofcode.Images.OnenoteOCR\journeyofcode.Images.OnenoteOCR.csproj", "{51FE127E-FF4C-445D-80D8-DB4B414953E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VTF", "VTF\VTF.csproj", "{69A42B92-BF25-4ACE-B41E-F64FE22E4C61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMGBase64URLExtractor", "IMGBase64URLExtractor\IMGBase64URLExtractor.csproj", "{76972868-6C7A-4C1F-8FC5-D38CA768DBE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesseractBasedSolution", "TesseractBasedSolution\TesseractBasedSolution.csproj", "{3D60A7C4-68E0-474E-8430-FBBEC8CBF95E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +39,18 @@ Global
 		{51FE127E-FF4C-445D-80D8-DB4B414953E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51FE127E-FF4C-445D-80D8-DB4B414953E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51FE127E-FF4C-445D-80D8-DB4B414953E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69A42B92-BF25-4ACE-B41E-F64FE22E4C61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69A42B92-BF25-4ACE-B41E-F64FE22E4C61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69A42B92-BF25-4ACE-B41E-F64FE22E4C61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69A42B92-BF25-4ACE-B41E-F64FE22E4C61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76972868-6C7A-4C1F-8FC5-D38CA768DBE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76972868-6C7A-4C1F-8FC5-D38CA768DBE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76972868-6C7A-4C1F-8FC5-D38CA768DBE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76972868-6C7A-4C1F-8FC5-D38CA768DBE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D60A7C4-68E0-474E-8430-FBBEC8CBF95E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D60A7C4-68E0-474E-8430-FBBEC8CBF95E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D60A7C4-68E0-474E-8430-FBBEC8CBF95E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D60A7C4-68E0-474E-8430-FBBEC8CBF95E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

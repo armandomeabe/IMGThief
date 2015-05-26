@@ -32,12 +32,13 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.listBox4 = new System.Windows.Forms.ListBox();
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.listBox4 = new System.Windows.Forms.ListBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -82,6 +83,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(801, 590);
             this.panel1.TabIndex = 4;
+            // 
+            // listBox4
+            // 
+            this.listBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.listBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.Location = new System.Drawing.Point(580, 0);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(221, 590);
+            this.listBox4.TabIndex = 7;
             // 
             // listBox3
             // 
@@ -131,21 +142,19 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // listBox4
+            // textBox3
             // 
-            this.listBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.listBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.Location = new System.Drawing.Point(580, 0);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(221, 590);
-            this.listBox4.TabIndex = 7;
+            this.textBox3.Location = new System.Drawing.Point(867, 302);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(281, 20);
+            this.textBox3.TabIndex = 9;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1289, 590);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.panel1);
@@ -173,6 +182,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ListBox listBox4;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
 

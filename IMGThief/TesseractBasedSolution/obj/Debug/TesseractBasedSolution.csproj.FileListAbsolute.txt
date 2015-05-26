@@ -1,0 +1,7 @@
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\TesseractBasedSolution\bin\Debug\TesseractBasedSolution.exe.config
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\TesseractBasedSolution\bin\Debug\TesseractBasedSolution.exe
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\TesseractBasedSolution\bin\Debug\TesseractBasedSolution.pdb
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\TesseractBasedSolution\bin\Debug\tessnet2_64.dll
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\TesseractBasedSolution\bin\Debug\tessnet2_64.pdb
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\TesseractBasedSolution\obj\Debug\TesseractBasedSolution.exe
+E:\Applied Chaos\GIT Repos\IMGThief\IMGThief\TesseractBasedSolution\obj\Debug\TesseractBasedSolution.pdb

@@ -25,6 +25,8 @@ namespace IMGThief.GUI
         private IMGThiefCore.Core core { get; set; }
         public Random Rand { get; set; }
 
+        private EmailSeekerEntities db { get; set; }
+
         public Form1()
         {
             InitializeComponent();
@@ -33,6 +35,7 @@ namespace IMGThief.GUI
             visited = new List<string>();
             visit = new List<string>();
             Rand = new Random(DateTime.Now.Millisecond);
+            db = new EmailSeekerEntities();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -84,18 +87,42 @@ namespace IMGThief.GUI
 
                 if (!item.ToString().Contains("base64")) continue;
                 var str = item.ToString().Replace("data:image/png;base64,", "");
+                
                 var bitmapData = new Byte[str.Length];
                 bitmapData = Convert.FromBase64String(FixBase64ForImage(str));
                 var streamBitmap = new System.IO.MemoryStream(bitmapData);
                 var bitImage = new Bitmap((Bitmap)Image.FromStream(streamBitmap));
                 var path = @"E:/TEMP/imgthief/" + (Rand.Next(int.MinValue, int.MaxValue)) + "_" + (Rand.Next(int.MinValue, int.MaxValue)) + ".jpg";
-                bitImage = ResizeBitmap(bitImage, 900, 75);
+
+                int factor = 4;
+                bitImage = ResizeBitmap(bitImage, bitImage.Width * factor, bitImage.Height * factor);
+
                 bitImage.Save(path);
                 filePaths.Add(path);
 
                 var result = core.FetchPictureText(path);
-                if (!string.IsNullOrWhiteSpace(result) && !listBox2.Items.Contains(result))
-                    listBox2.Items.Add(result);
+                if (!string.IsNullOrWhiteSpace(result) && !listBox2.Items.Contains(result) && Regex.Matches(result, @"[a-zA-Z]").Count > 0)
+                {
+                    //Regex.Replace(result, @"[^a-zA-z0-9 ]+", "");
+                    result =
+                        QuitAccents(
+                            result.Replace("©", "@")
+                                .Normalize(NormalizationForm.FormC));
+                    
+
+                    if (result.Contains("@"))
+                    {
+                        listBox2.Items.Add(result);
+                        var mail = new Email() { email1 = result };
+                        db.Emails.Add(mail);
+                    }
+                    
+                    // ARREGLAR EL REDIMENSIONADO DE IMAGENES Y SALE CON FRITAS
+
+
+                }
+
+                db.SaveChanges();
 
                 Application.DoEvents();
 
@@ -117,7 +144,6 @@ namespace IMGThief.GUI
 
                 textBox1.Text = textBox2.Text + listBox3.Items[0];
                 listBox3.Items.RemoveAt(0);
-
 
 
                 visited.Add(textBox1.Text.Replace(textBox2.Text, ""));
@@ -149,6 +175,29 @@ namespace IMGThief.GUI
                 if (!string.IsNullOrWhiteSpace(result))
                     listBox2.Items.Add(result);
             }
+        }
+
+        public string QuitAccents(string inputString)
+        {
+            Regex a = new Regex("[á|à|ä|â]", RegexOptions.Compiled);
+            Regex e = new Regex("[é|è|ë|ê]", RegexOptions.Compiled);
+            Regex i = new Regex("[í|ì|ï|î]", RegexOptions.Compiled);
+            Regex o = new Regex("[ó|ò|ö|ô]", RegexOptions.Compiled);
+            Regex u = new Regex("[ú|ù|ü|û]", RegexOptions.Compiled);
+            Regex n = new Regex("[ñ|Ñ]", RegexOptions.Compiled);
+            inputString = a.Replace(inputString, "a");
+            inputString = e.Replace(inputString, "e");
+            inputString = i.Replace(inputString, "i");
+            inputString = o.Replace(inputString, "o");
+            inputString = u.Replace(inputString, "u");
+            inputString = n.Replace(inputString, "n");
+
+            inputString = inputString.Replace("ì", "i"); // No parece funcionar en el regex
+            inputString = inputString.Replace("í", "i"); // No parece funcionar en el regex
+            inputString = inputString.Replace(" ", "_");
+            inputString = inputString.Replace("hotmaìl", "hotmail");
+
+            return inputString;
         }
     }
 }
