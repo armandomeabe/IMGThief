@@ -23,111 +23,115 @@ namespace IMGBase64URLExtractor
             var core = new Core();
             var rand = new Random(DateTime.Now.Millisecond);
 
-            var URLs = db.URLs.ToList();
-
-            foreach (var url in URLs)
-            {
-                try
-                {
-                    if (url.relativepart.EndsWith("jpg") || url.relativepart.EndsWith("png") || url.relativepart.EndsWith("gif") || url.relativepart.Contains("#") || url.relativepart.Contains("javascript"))
-                    {
-                        Console.WriteLine("Url omitida: " + url.relativepart);
-                        continue;
-                    }
-
-                    var picUrls = core.FetchUrlBase64Pictures(url.source + url.relativepart);
-                    foreach (var picUrl in picUrls)
-                    {
-                        // Antes de guardar: Eliminar los archivos que acabo de crear porque puede crecer muchísimo esta carpeta.
-                        var downloadedMessageInfo = new DirectoryInfo(@"E:/TEMP/imgthief/");
-                        foreach (FileInfo file in downloadedMessageInfo.GetFiles())
-                        {
-                            file.Delete();
-                        }
-
-
-                        var str = picUrl.Replace("data:image/png;base64,", "");
-
-                        var bitmapData = new Byte[str.Length];
-                        bitmapData = Convert.FromBase64String(FixBase64ForImage(str));
-                        var streamBitmap = new System.IO.MemoryStream(bitmapData);
-                        var bitImage = new Bitmap((Bitmap)Image.FromStream(streamBitmap));
-                        var path = @"E:/TEMP/imgthief/" + (rand.Next(int.MinValue, int.MaxValue)) + "_" +
-                                   (rand.Next(int.MinValue, int.MaxValue)) + ".jpg";
-
-                        var factor = 2.5;
-                        bitImage = ResizeBitmap(bitImage, (int)(bitImage.Width * factor), (int)(bitImage.Height * factor));
-                        bitImage.Save(path);
-
-
-                        var results = MODIOCR(@"E:/TEMP/imgthief/");
-                        foreach (var result in results)
-                        {
-                            var r = QuitAccents(
-                                    result
-                                    .Replace("©", "@")
-                                    .Replace("I", "l")
-                                    .Replace("\r\n", "")
-                                    .Normalize(NormalizationForm.FormC));
-
-                            if (r.Contains("@"))
-                            {
-                                {
-                                    Console.WriteLine("Encontrado: " + r);
-                                    var mail = new Email() { email1 = r, source = url.source + url.relativepart, sitioId = url.sitioId };
-                                    if (db.Emails.Any(x => x.email1.Equals(mail.email1)))
-                                    {
-                                        Console.WriteLine(mail.email1 + " YA EXISTÍA EN LA BD");
-                                        continue;
-                                    }
-                                    else
-                                    {
-                                        Console.WriteLine("Persistiendo: " + mail.email1);
-                                    }
-                                    db.Emails.Add(mail);
-                                    db.SaveChanges();
-                                }
-                            }
-                        }
+            var results = MODIOCR(@"E:/TEMP/imgthief/");
 
 
 
-                        //var result = core.FetchPictureText(path);
-                        //if (!string.IsNullOrWhiteSpace(result) && Regex.Matches(result, @"[a-zA-Z]").Count > 0)
-                        //{
-                        //    //Regex.Replace(result, @"[^a-zA-z0-9 ]+", "");
-                        //    result =
-                        //        QuitAccents(
-                        //            result
-                        //            .Replace("©", "@")
-                        //            .Replace("I", "l")
-                        //            .Normalize(NormalizationForm.FormC));
+            //var URLs = db.URLs.ToList();
+
+            //foreach (var url in URLs)
+            //{
+            //    try
+            //    {
+            //        if (url.relativepart.EndsWith("jpg") || url.relativepart.EndsWith("png") || url.relativepart.EndsWith("gif") || url.relativepart.Contains("#") || url.relativepart.Contains("javascript"))
+            //        {
+            //            Console.WriteLine("Url omitida: " + url.relativepart);
+            //            continue;
+            //        }
+
+            //        var picUrls = core.FetchUrlBase64Pictures(url.source + url.relativepart);
+            //        foreach (var picUrl in picUrls)
+            //        {
+            //            // Antes de guardar: Eliminar los archivos que acabo de crear porque puede crecer muchísimo esta carpeta.
+            //            var downloadedMessageInfo = new DirectoryInfo(@"E:/TEMP/imgthief/");
+            //            foreach (FileInfo file in downloadedMessageInfo.GetFiles())
+            //            {
+            //                file.Delete();
+            //            }
 
 
-                        //    if (result.Contains("@"))
-                        //    {
-                        //        Console.WriteLine("Encontrado: " + result);
-                        //        var mail = new Email() { email1 = result, source = url.source + url.relativepart, sitioId = url.sitioId };
-                        //        if (db.Emails.Any(x => x.email1.Equals(mail.email1)))
-                        //        {
-                        //            Console.WriteLine(mail.email1 + " YA EXISTÍA EN LA BD");
-                        //            continue;
-                        //        }
-                        //        else
-                        //        {
-                        //            Console.WriteLine("Persistiendo: " + mail.email1);
-                        //        }
-                        //        db.Emails.Add(mail);
-                        //        db.SaveChanges();
-                        //    }
-                        //}
-                    }
-                }
-                catch
-                {
-                    continue;
-                }
-            }
+            //            var str = picUrl.Replace("data:image/png;base64,", "");
+
+            //            var bitmapData = new Byte[str.Length];
+            //            bitmapData = Convert.FromBase64String(FixBase64ForImage(str));
+            //            var streamBitmap = new System.IO.MemoryStream(bitmapData);
+            //            var bitImage = new Bitmap((Bitmap)Image.FromStream(streamBitmap));
+            //            var path = @"E:/TEMP/imgthief/" + (rand.Next(int.MinValue, int.MaxValue)) + "_" +
+            //                       (rand.Next(int.MinValue, int.MaxValue)) + ".jpg";
+
+            //            var factor = 2.5;
+            //            bitImage = ResizeBitmap(bitImage, (int)(bitImage.Width * factor), (int)(bitImage.Height * factor));
+            //            bitImage.Save(path);
+
+
+            //            var results = MODIOCR(@"E:/TEMP/imgthief/");
+            //            foreach (var result in results)
+            //            {
+            //                var r = QuitAccents(
+            //                        result
+            //                        .Replace("©", "@")
+            //                        .Replace("I", "l")
+            //                        .Replace("\r\n", "")
+            //                        .Normalize(NormalizationForm.FormC));
+
+            //                if (r.Contains("@"))
+            //                {
+            //                    {
+            //                        Console.WriteLine("Encontrado: " + r);
+            //                        var mail = new Email() { email1 = r, source = url.source + url.relativepart, sitioId = url.sitioId };
+            //                        if (db.Emails.Any(x => x.email1.Equals(mail.email1)))
+            //                        {
+            //                            Console.WriteLine(mail.email1 + " YA EXISTÍA EN LA BD");
+            //                            continue;
+            //                        }
+            //                        else
+            //                        {
+            //                            Console.WriteLine("Persistiendo: " + mail.email1);
+            //                        }
+            //                        db.Emails.Add(mail);
+            //                        db.SaveChanges();
+            //                    }
+            //                }
+            //            }
+
+
+
+            //            //var result = core.FetchPictureText(path);
+            //            //if (!string.IsNullOrWhiteSpace(result) && Regex.Matches(result, @"[a-zA-Z]").Count > 0)
+            //            //{
+            //            //    //Regex.Replace(result, @"[^a-zA-z0-9 ]+", "");
+            //            //    result =
+            //            //        QuitAccents(
+            //            //            result
+            //            //            .Replace("©", "@")
+            //            //            .Replace("I", "l")
+            //            //            .Normalize(NormalizationForm.FormC));
+
+
+            //            //    if (result.Contains("@"))
+            //            //    {
+            //            //        Console.WriteLine("Encontrado: " + result);
+            //            //        var mail = new Email() { email1 = result, source = url.source + url.relativepart, sitioId = url.sitioId };
+            //            //        if (db.Emails.Any(x => x.email1.Equals(mail.email1)))
+            //            //        {
+            //            //            Console.WriteLine(mail.email1 + " YA EXISTÍA EN LA BD");
+            //            //            continue;
+            //            //        }
+            //            //        else
+            //            //        {
+            //            //            Console.WriteLine("Persistiendo: " + mail.email1);
+            //            //        }
+            //            //        db.Emails.Add(mail);
+            //            //        db.SaveChanges();
+            //            //    }
+            //            //}
+            //        }
+            //    }
+            //    catch
+            //    {
+            //        continue;
+            //    }
+            //}
         }
 
         public static string FixBase64ForImage(string Image)
@@ -186,6 +190,8 @@ namespace IMGBase64URLExtractor
                         MODI.Image image = (MODI.Image)md.Images[0];
 
                         results.Add(image.Layout.Text);
+
+                        Console.WriteLine(image.Layout.Text);
                     }
                     catch
                     {
